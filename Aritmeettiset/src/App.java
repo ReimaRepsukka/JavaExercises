@@ -33,6 +33,12 @@ public class App {
         System.out.println(x + "/" + y + "=" + ((double)x/y));
 
         //Harj4
+        final double CONVERTER = 0.84;
+        System.out.println("Anna summa dollareina:");
+        double dollars = Double.parseDouble(sc.nextLine());
+
+        System.out.println(dollars + "$ = " + (dollars*CONVERTER)+"€");
+
         //Harj5
         double paino = 80;
         double pituus = 1.75;
