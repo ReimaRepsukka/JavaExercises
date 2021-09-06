@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class ForRatkaisut {
@@ -43,6 +44,27 @@ public class ForRatkaisut {
         //Harj7
         for (int i=0, a=200; i<=a; i++, a-=2) {
             System.out.println("i="+i + " a="+a);
+        }
+
+        //Harj8
+        for (int i = 10, a = 100; i < 20; i++, a+=3) {
+            System.out.println("Pelaaja " + i + ": " + a);
+        }
+
+        //Harj9
+        Random r = new Random();
+        for (int i = 1; i < 4; i++) {
+            System.out.println("Joukkue " + i + ":");
+            for (int j = 1; j < 11; j++) {
+                System.out.print("Pelaaja " + j +
+                    " numerot: " );
+                for (int a = 0; a < 5; a++) {
+                    System.out.print(r.nextInt(9));
+                    if(a != 4)
+                        System.out.print(",");
+                }
+                System.out.println();
+            }
         }
 
         sc.close();
