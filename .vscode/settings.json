@@ -1,6 +1,9 @@
 {
     "java.project.sourcePaths": [
         "Toistorakenteet/src",
-        "Taulukot"
+        "Taulukot",
+        "Ehtolausekkeet/src",
+        "Aritmeettiset/src",
+        "Metodit"
     ]
 }

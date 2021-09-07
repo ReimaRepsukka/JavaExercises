@@ -60,7 +60,7 @@ public class Taulukkoharj {
         //Harj7 c
         int[] lukuja = new int[5];
 
-        System.out.println("Anna yksi kerrallaan koknaisluvut taulukkoon");
+        System.out.println("Anna yksi kerrallaan kokonaisluvut taulukkoon");
         
         for (int i = 0; i < lukuja.length; i++) {
             lukuja[i] = Integer.parseInt(sc.nextLine());
@@ -83,9 +83,6 @@ public class Taulukkoharj {
             }
         }
         System.out.println("Taulukon pienin arvo on " + pienin);
-
-        
-
 
 
         sc.close();

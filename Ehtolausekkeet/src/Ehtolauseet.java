@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class App {
+public class Ehtolauseet {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         //Harj1: Koodi tulostaa: Mielestäni ohjelmointi ei ole helppoa! Vai mitä?
@@ -96,5 +96,8 @@ public class App {
                 System.out.println("Onnittelut hyvästä kisasta, vaikkei mitalia tullutkaan");
                 break;
         }
+
+
+        sc.close();
     }
 }
