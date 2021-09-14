@@ -3,8 +3,9 @@
         "Toistorakenteet/src",
         "Taulukot",
         "Metodit",
+        "Koosteet",
         "Ehtolausekkeet/src",
         "Aritmeettiset/src",
-        "Koosteet"
+        "Luokat"
     ]
 }
