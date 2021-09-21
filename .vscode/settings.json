@@ -3,9 +3,10 @@
         "Toistorakenteet/src",
         "Taulukot",
         "Metodit",
+        "Luokat",
         "Koosteet",
         "Ehtolausekkeet/src",
         "Aritmeettiset/src",
-        "Luokat"
+        "Periytyminen"
     ]
 }
