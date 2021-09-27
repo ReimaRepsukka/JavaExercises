@@ -32,9 +32,8 @@ public class LuokatMain {
         System.out.println(p.getInfo());
 
         Player p2 = new Player("Tiina");
+        p2.addPoints(-40);
         System.out.println(p2.getInfo());
 
-        Player p3 = new Player("Marc", -4);
-        System.out.println(p3.getInfo());
     }
 }
