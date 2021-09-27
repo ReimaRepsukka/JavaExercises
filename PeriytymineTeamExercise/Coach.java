@@ -4,9 +4,12 @@ public class Coach extends TeamMember {
 
     public Coach(String name, int experience) {
         super(name);
+        this.experience = experience;
     }
-    this.experience = experience;
 
+    @Override
+    public String getMemberinfo() {
+        return "Name:" + this.getName() + " Experience:" + this.experience + " years";
+    }
     
-
 }
