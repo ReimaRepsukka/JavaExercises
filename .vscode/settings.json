@@ -2,13 +2,15 @@
     "java.project.sourcePaths": [
         "Toistorakenteet/src",
         "Taulukot",
+        "PeriytyminenKirjasto",
         "Periytyminen2",
         "Periytyminen",
+        "PeriytymineTeamExercise",
         "Metodit",
         "Luokat",
         "Koosteet",
         "Ehtolausekkeet/src",
         "Aritmeettiset/src",
-        "Kirjasto"
+        "InterfaceHarj"
     ]
 }
