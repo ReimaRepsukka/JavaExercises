@@ -8,6 +8,8 @@ import javax.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -30,22 +32,42 @@ public class ExamController {
     
     @GetMapping("exam")
     public String getFirsExam(){
-        Exam e = exams.get(0);
-        String exam = "<b>Name: </b>" + e.getName() + "<br>";
-        exam += "<b>Studen name: </b>" + e.getStudentName() + "<br>";
-        exam += "<b>Grade: </b>" + e.getGrade() + "<br>";
-        return exam;
+        if(exams.size() > 0)
+            return createExamHtml(exams.get(0));
+            
+        return "<h3>Exam not found!</h3>";
     }
 
     @GetMapping("exam/{id}")
     public String getMethodName(@PathVariable int id) {
-        
-        if(id < exams.size()){
-            return createExamHtml(exams.get(id));
+        //Checking if the exam exists.
+        if(id >= exams.size() || id < 0){
+            return "<h3>Exam not found!</h3>";
         }
-        return "<h3>Exam not found!</h3>";
+        return createExamHtml(exams.get(id));
+    }
+
+    @GetMapping("create")
+    public Exam createExam(@RequestParam String name,  
+        @RequestParam String sname, @RequestParam int grade){
+    
+        Exam exam =  new Exam(name, sname, grade);
+        exams.add(exam);
+
+        return exam;
     }
     
+    @PostMapping("postexam")
+    public Exam postExam(@RequestParam String name,  
+        @RequestParam String sname, @RequestParam int grade){
+    
+        Exam exam =  new Exam(name, sname, grade);
+        exams.add(exam);
+
+        return exam;
+    }
+
+
     /**
      * This is just separate helper method for creating html from the exam info.
      */
