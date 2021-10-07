@@ -8,6 +8,9 @@ import javax.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 @RestController
@@ -45,6 +48,7 @@ public class ExamController {
         }
         return "<h3>Exam not found!</h3>";
     }
+
     
     /**
      * This is just separate helper method for creating html from the exam info.
