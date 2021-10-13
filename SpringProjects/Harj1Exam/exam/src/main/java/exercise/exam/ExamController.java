@@ -23,6 +23,7 @@ public class ExamController {
         exams.add(new Exam("Database design", "Lisa Simpson", 5));
         exams.add(new Exam("Acting fundamentals", "Johnny Depp", 3));
         exams.add(new Exam("Drumming basic rudiments", "Dave Weckl", 5));
+        
     }
 
     @GetMapping("exams")
