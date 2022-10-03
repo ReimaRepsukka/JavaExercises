@@ -69,18 +69,20 @@ public class BankAccount {
     static void withdraw() throws BankAccountBalanceException
     {
         double amount = 0;
+
         System.out.println("How much you want to withdraw?");
+        
         try {
             amount  =  Double.parseDouble(scanner.nextLine());
-            if(balance-amount < 0){
-                throw new BankAccountBalanceException("Not enough money");
-            }
-            balance -= amount;
-
         } catch (Exception e) {
             System.out.println("Input is not a decimal number");
         }
-       
+
+        if(balance-amount < 0){
+            throw new BankAccountBalanceException("Not enough money");
+        }
+
+        balance -= amount;
         
     }
 
